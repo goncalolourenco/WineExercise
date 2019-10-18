@@ -22,7 +22,7 @@ const WhineSchema = Yup.object().shape({
     .required('Required'),
   description: Yup.string()
     .min(50, 'Description is too short')
-    .max(250, 'Description is too long!')
+    .max(450, 'Description is too long!')
     .required('Required'),
   type: Yup.string().required('Required'),
   grapes: Yup.array().min(1, 'Select at least one option'),
@@ -68,7 +68,7 @@ const WineAdd: React.FC<WinesProps> = props => {
             <Field
               name='name'
               render={({ field, form }: FieldProps<WineFormValues>) => (
-                <div>
+                <React.Fragment>
                   <Input
                     type='text'
                     {...field}
@@ -80,14 +80,14 @@ const WineAdd: React.FC<WinesProps> = props => {
                   <Box as='p' color='red.500' margin={0}>
                     {form.touched.name && form.errors.name && form.errors.name}
                   </Box>
-                </div>
+                </React.Fragment>
               )}
             />
 
             <Field
               name='region'
               render={({ field, form }: FieldProps<WineFormValues>) => (
-                <div>
+                <React.Fragment>
                   <Input
                     type='text'
                     {...field}
@@ -100,14 +100,14 @@ const WineAdd: React.FC<WinesProps> = props => {
                   <Box as='p' color='red.500' margin={0}>
                     {form.touched.region && form.errors.region && form.errors.region}
                   </Box>
-                </div>
+                </React.Fragment>
               )}
             />
 
             <Field
               name='description'
               render={({ field, form }: FieldProps<WineFormValues>) => (
-                <div>
+                <React.Fragment>
                   <Textarea
                     {...field}
                     aria-label='Wine Description'
@@ -121,14 +121,14 @@ const WineAdd: React.FC<WinesProps> = props => {
                   <Box as='p' color='red.500' margin={0}>
                     {form.touched.description && form.errors.description && form.errors.description}
                   </Box>
-                </div>
+                </React.Fragment>
               )}
             />
 
             <Field
               name='type'
               render={({ field, form }: FieldProps<WineFormValues>) => (
-                <div>
+                <React.Fragment>
                   <FormLabel htmlFor='type' marginTop={5}>
                     Type
                   </FormLabel>
@@ -144,14 +144,14 @@ const WineAdd: React.FC<WinesProps> = props => {
                   <Box as='p' color='red.500' margin={0}>
                     {form.touched.type && form.errors.type && form.errors.type}
                   </Box>
-                </div>
+                </React.Fragment>
               )}
             />
 
             <Field
               name='grapes'
               render={({ field, form }: FieldProps<WineFormValues>) => (
-                <div>
+                <React.Fragment>
                   <FormLabel htmlFor='grapes' marginTop={5}>
                     Grapes
                   </FormLabel>
@@ -182,7 +182,7 @@ const WineAdd: React.FC<WinesProps> = props => {
                   <Box as='p' color='red.500' margin={0}>
                     {form.touched.grapes && form.errors.grapes && form.errors.grapes}
                   </Box>
-                </div>
+                </React.Fragment>
               )}
             />
 
@@ -193,7 +193,7 @@ const WineAdd: React.FC<WinesProps> = props => {
                   form.touched.image && form.touched.image.url && !(form.errors.image && form.errors.image.url);
 
                 return (
-                  <div>
+                  <React.Fragment>
                     <Input
                       type='text'
                       {...field}
@@ -212,7 +212,7 @@ const WineAdd: React.FC<WinesProps> = props => {
                     <Box as='p' color='red.500' margin={0}>
                       {form.touched.image && form.touched.image && form.errors.image && form.errors.image.url}
                     </Box>
-                  </div>
+                  </React.Fragment>
                 );
               }}
             />

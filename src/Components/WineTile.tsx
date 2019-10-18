@@ -14,11 +14,18 @@ const WineTile: React.FC<WineType & { isDetailed: boolean }> = ({
   isDetailed
 }) => {
   return (
-    <Box marginBottom={12} display='flex' {...(isDetailed && { marginBottom: 'auto', marginTop: 'auto' })}>
+    <Box as='article' marginBottom={12} display='flex' {...(isDetailed && { marginBottom: 'auto', marginTop: 'auto' })}>
       <Box as='figure' margin='0 -30px 0  0'>
         <img src={image && image.url} alt='wine-bottle' />
       </Box>
-      <Box display='flex' flexDirection='column' alignItems='center' justifyContent='space-between' flex='0 1 100%'>
+      <Box
+        as='section'
+        display='flex'
+        flexDirection='column'
+        alignItems='center'
+        justifyContent='space-between'
+        flex='0 1 100%'
+      >
         <Box as='h2' textAlign='center' cursor='pointer' onClick={() => navigate(`/wine/${id}`)}>
           {name}
         </Box>
@@ -32,7 +39,9 @@ const WineTile: React.FC<WineType & { isDetailed: boolean }> = ({
             </Box>
           </Fragment>
         )}
-        <Box textAlign='center'>{description}</Box>
+        <Box textAlign='center' wordBreak='break-word'>
+          {description}
+        </Box>
         <Box as='span' alignSelf='flex-end'>
           {type} wine
         </Box>

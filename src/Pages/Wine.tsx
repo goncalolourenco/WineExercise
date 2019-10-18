@@ -12,6 +12,7 @@ const Wine: React.FC<WineProps> = ({ wineId }) => {
 
   if (loading) return <p>Loading</p>;
   if (error) return <p>ERROR</p>;
+  if (!wine) return <p>Page not found</p>;
 
   return <Fragment>{wine && <WineTile isDetailed {...wine} />}</Fragment>;
 };

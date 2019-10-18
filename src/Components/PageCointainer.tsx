@@ -7,8 +7,10 @@ const PageContainer: React.FC = ({ children }) => {
     <Fragment>
       <Header />
       <Box
+        as='main'
         display='flex'
         flexDirection='column'
+        justifyContent='space-between'
         width='100%'
         maxWidth='600px'
         minHeight='calc(100vh - 96px)'
@@ -42,7 +44,7 @@ const Header: React.FC = () => {
 };
 
 const Footer: React.FC = () => {
-  return <Box height={12} backgroundColor='red.300' />;
+  return <Box as='footer' height={12} backgroundColor='red.300' />;
 };
 
 export default PageContainer;
