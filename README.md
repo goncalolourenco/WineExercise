@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## IMPORTANT!!
 
 To run this app execute the commands:
-yarn install
+yarn install<br />
 yarn start
 
 ## Available Scripts
