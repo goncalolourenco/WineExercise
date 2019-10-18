@@ -1,9 +1,29 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+div[type='radio'] {
+  color: gray;
+}
+
+div[type='checkbox'] {
+  color: gray;
+}
+
+div[aria-hidden='true'] {
+  color: gray;
 }
 
 .App-header {

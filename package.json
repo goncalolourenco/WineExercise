@@ -3,14 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "3.0.0",
+    "@chakra-ui/core": "^0.4.0",
+    "@emotion/core": "^10.0.21",
+    "@emotion/styled": "^10.0.17",
+    "@reach/router": "^1.2.1",
     "@types/jest": "24.0.19",
     "@types/node": "12.11.1",
+    "@types/reach__router": "^1.2.6",
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
+    "@types/yup": "^0.26.24",
+    "antd": "^3.24.1",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-http": "^1.5.15",
+    "emotion-theming": "^10.0.19",
+    "formik": "^1.5.8",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-icons": "^3.7.0",
     "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
+    "typescript": "3.6.4",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +49,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "3.0.0",
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.7",
+    "apollo": "^2.16.3",
+    "artillery": "^1.6.0-26"
   }
 }
