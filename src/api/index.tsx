@@ -1,6 +1,6 @@
 import fakeData, { fakeTypes, fakeGrapes } from './fakeData';
 
-function wait(ms = 1000) {
+function wait(ms = 500) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -37,17 +37,19 @@ const api = {
     }
 
     if (type) {
-      data = data.filter(wine => wine.type === type);
+      data = data.filter(wine => wine.type === type || type === 'All');
     }
 
+    let _totalSize = data.length;
     let _skip = skip ? skip : 0;
+
     if (first) {
       data = data.slice(_skip, first + _skip);
     } else if (last) {
       data = data.slice(data.length - last - _skip, data.length - _skip);
     }
 
-    return { data, numberOfItems: fakeData.length };
+    return { data, numberOfItems: _totalSize };
   },
 
   async getWine(id: string | number) {

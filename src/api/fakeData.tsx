@@ -682,7 +682,7 @@ export const fakeTypes = [
   { id: 2, name: 'Blanc' },
   { id: 3, name: 'Effervescent' },
   { id: 4, name: 'Rosé' },
-  { id: 5, name: 'Moellux' }
+  { id: 5, name: 'Moelleux' }
 ];
 
 export const fakeGrapes = [
